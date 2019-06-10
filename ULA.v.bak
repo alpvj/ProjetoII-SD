@@ -1,7 +1,7 @@
 module ULA(func, A, B, Z);
 
 input wire [3:0] A, B;
-input wire [1:0] func;
+input wire func;
 output reg [3:0] Z;
 
 parameter ADD = 2'b00;
