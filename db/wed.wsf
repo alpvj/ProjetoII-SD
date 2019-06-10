@@ -23,10 +23,10 @@ applicable agreement for further details.
 VECTOR("D:/Users/alpvj/Desktop/ProjetoII-SD/ULA.vwf")
 {
 	ZOOM{
-		ZBEGIN = 994895;
-		ZEND = 1000000;
-		NUMERATOR = 948;
-		DENOMINATOR = 5924;
+		ZBEGIN = 393957;
+		ZEND = 398777;
+		NUMERATOR = 1090;
+		DENOMINATOR = 7808;
 		TOP_INDEX = 0;
 	}
 	CLOCK{
@@ -126,7 +126,7 @@ VECTOR("D:/Users/alpvj/Desktop/ProjetoII-SD/ULA.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "func[1]";
+		SIGNAL = "func[2]";
 		INDEX = 11;
 		FORMAT = E;
 		SCALE = 1;
@@ -134,7 +134,7 @@ VECTOR("D:/Users/alpvj/Desktop/ProjetoII-SD/ULA.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "func[0]";
+		SIGNAL = "func[1]";
 		INDEX = 12;
 		FORMAT = E;
 		SCALE = 1;
@@ -142,8 +142,16 @@ VECTOR("D:/Users/alpvj/Desktop/ProjetoII-SD/ULA.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Z";
+		SIGNAL = "func[0]";
 		INDEX = 13;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "Z";
+		INDEX = 14;
 		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -151,14 +159,6 @@ VECTOR("D:/Users/alpvj/Desktop/ProjetoII-SD/ULA.vwf")
 	}
 	LINE{
 		SIGNAL = "Z[3]";
-		INDEX = 14;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "Z[2]";
 		INDEX = 15;
 		FORMAT = E;
 		SCALE = 1;
@@ -166,7 +166,7 @@ VECTOR("D:/Users/alpvj/Desktop/ProjetoII-SD/ULA.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Z[1]";
+		SIGNAL = "Z[2]";
 		INDEX = 16;
 		FORMAT = E;
 		SCALE = 1;
@@ -174,8 +174,16 @@ VECTOR("D:/Users/alpvj/Desktop/ProjetoII-SD/ULA.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Z[0]";
+		SIGNAL = "Z[1]";
 		INDEX = 17;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "Z[0]";
+		INDEX = 18;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
