@@ -1,5 +1,5 @@
 Flow report for ProjetoII
-Mon Jun 10 16:54:23 2019
+Tue Jun 25 15:03:52 2019
 Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
@@ -38,17 +38,17 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +-------------------------------+-----------------------------------------------+
-; Flow Status                   ; Successful - Mon Jun 10 16:54:23 2019         ;
+; Flow Status                   ; Successful - Tue Jun 25 15:03:52 2019         ;
 ; Quartus II 64-Bit Version     ; 9.1 Build 350 03/24/2010 SP 2 SJ Full Version ;
 ; Revision Name                 ; ProjetoII                                     ;
-; Top-level Entity Name         ; ULA                                           ;
+; Top-level Entity Name         ; controle                                      ;
 ; Family                        ; Stratix II                                    ;
 ; Met timing requirements       ; Yes                                           ;
 ; Logic utilization             ; < 1 %                                         ;
-;     Combinational ALUTs       ; 23 / 12,480 ( < 1 % )                         ;
-;     Dedicated logic registers ; 0 / 12,480 ( 0 % )                            ;
-; Total registers               ; 0                                             ;
-; Total pins                    ; 15 / 343 ( 4 % )                              ;
+;     Combinational ALUTs       ; 3 / 12,480 ( < 1 % )                          ;
+;     Dedicated logic registers ; 4 / 12,480 ( < 1 % )                          ;
+; Total registers               ; 4                                             ;
+; Total pins                    ; 21 / 343 ( 6 % )                              ;
 ; Total virtual pins            ; 0                                             ;
 ; Total block memory bits       ; 0 / 419,328 ( 0 % )                           ;
 ; DSP block 9-bit elements      ; 0 / 96 ( 0 % )                                ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/10/2019 16:54:15 ;
+; Start date & time ; 06/25/2019 15:03:44 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ProjetoII           ;
 +-------------------+---------------------+
@@ -75,10 +75,10 @@ applicable agreement for further details.
 +------------------------------------+---------------------------------+---------------+-------------+----------------+
 ; Assignment Name                    ; Value                           ; Default Value ; Entity Name ; Section Id     ;
 +------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 229335799398872.156019645503600 ; --            ; --          ; --             ;
-; PARTITION_COLOR                    ; 16764057                        ; --            ; ULA         ; Top            ;
-; PARTITION_NETLIST_TYPE             ; SOURCE                          ; --            ; ULA         ; Top            ;
-; TOP_LEVEL_ENTITY                   ; ULA                             ; ProjetoII     ; --          ; --             ;
+; COMPILER_SIGNATURE_ID              ; 229335799398773.156148582417044 ; --            ; --          ; --             ;
+; PARTITION_COLOR                    ; 16764057                        ; --            ; controle    ; Top            ;
+; PARTITION_NETLIST_TYPE             ; SOURCE                          ; --            ; controle    ; Top            ;
+; TOP_LEVEL_ENTITY                   ; controle                        ; ProjetoII     ; --          ; --             ;
 ; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                             ; --            ; --          ; eda_blast_fpga ;
 +------------------------------------+---------------------------------+---------------+-------------+----------------+
 
@@ -101,10 +101,10 @@ applicable agreement for further details.
 +-------------------------+------------------+---------------+------------+----------------+
 ; Module Name             ; Machine Hostname ; OS Name       ; OS Version ; Processor type ;
 +-------------------------+------------------+---------------+------------+----------------+
-; Analysis & Synthesis    ; g3c27            ; Windows Vista ; 6.2        ; x86_64         ;
-; Fitter                  ; g3c27            ; Windows Vista ; 6.2        ; x86_64         ;
-; Assembler               ; g3c27            ; Windows Vista ; 6.2        ; x86_64         ;
-; Classic Timing Analyzer ; g3c27            ; Windows Vista ; 6.2        ; x86_64         ;
+; Analysis & Synthesis    ; g3c38            ; Windows Vista ; 6.2        ; x86_64         ;
+; Fitter                  ; g3c38            ; Windows Vista ; 6.2        ; x86_64         ;
+; Assembler               ; g3c38            ; Windows Vista ; 6.2        ; x86_64         ;
+; Classic Timing Analyzer ; g3c38            ; Windows Vista ; 6.2        ; x86_64         ;
 +-------------------------+------------------+---------------+------------+----------------+
 
 

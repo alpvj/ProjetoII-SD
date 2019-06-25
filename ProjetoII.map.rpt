@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ProjetoII
-Mon Jun 10 16:54:16 2019
+Tue Jun 25 15:03:45 2019
 Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
@@ -13,10 +13,10 @@ Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Versio
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. User-Specified and Inferred Latches
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Parameter Settings for User Entity Instance: Top-level Entity: |ULA
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |controle
  12. Analysis & Synthesis Messages
 
 
@@ -43,16 +43,16 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +-------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status   ; Successful - Mon Jun 10 16:54:16 2019         ;
+; Analysis & Synthesis Status   ; Successful - Tue Jun 25 15:03:45 2019         ;
 ; Quartus II 64-Bit Version     ; 9.1 Build 350 03/24/2010 SP 2 SJ Full Version ;
 ; Revision Name                 ; ProjetoII                                     ;
-; Top-level Entity Name         ; ULA                                           ;
+; Top-level Entity Name         ; controle                                      ;
 ; Family                        ; Stratix II                                    ;
 ; Logic utilization             ; N/A                                           ;
-;     Combinational ALUTs       ; 23                                            ;
-;     Dedicated logic registers ; 0                                             ;
-; Total registers               ; 0                                             ;
-; Total pins                    ; 15                                            ;
+;     Combinational ALUTs       ; 2                                             ;
+;     Dedicated logic registers ; 4                                             ;
+; Total registers               ; 4                                             ;
+; Total pins                    ; 21                                            ;
 ; Total virtual pins            ; 0                                             ;
 ; Total block memory bits       ; 0                                             ;
 ; DSP block 9-bit elements      ; 0                                             ;
@@ -66,7 +66,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
-; Top-level entity name                                                      ; ULA                ; ProjetoII          ;
+; Top-level entity name                                                      ; controle           ; ProjetoII          ;
 ; Family name                                                                ; Stratix II         ; Stratix II         ;
 ; Use Generated Physical Constraints File                                    ; Off                ;                    ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
@@ -158,53 +158,53 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                  ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path              ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------+
-; ULA.v                            ; yes             ; User Verilog HDL File  ; D:/Users/alpvj/Desktop/ProjetoII-SD/ULA.v ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                       ;
++----------------------------------+-----------------+------------------------+------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                   ;
++----------------------------------+-----------------+------------------------+------------------------------------------------+
+; controle.v                       ; yes             ; User Verilog HDL File  ; D:/Users/alpvj/Desktop/ProjetoII-SD/controle.v ;
++----------------------------------+-----------------+------------------------+------------------------------------------------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+-----------------------------------------------+---------+
-; Resource                                      ; Usage   ;
-+-----------------------------------------------+---------+
-; Estimated ALUTs Used                          ; 23      ;
-; Dedicated logic registers                     ; 0       ;
-;                                               ;         ;
-; Estimated ALUTs Unavailable                   ; 7       ;
-;                                               ;         ;
-; Total combinational functions                 ; 23      ;
-; Combinational ALUT usage by number of inputs  ;         ;
-;     -- 7 input functions                      ; 0       ;
-;     -- 6 input functions                      ; 7       ;
-;     -- 5 input functions                      ; 4       ;
-;     -- 4 input functions                      ; 2       ;
-;     -- <=3 input functions                    ; 10      ;
-;                                               ;         ;
-; Combinational ALUTs by mode                   ;         ;
-;     -- normal mode                            ; 18      ;
-;     -- extended LUT mode                      ; 0       ;
-;     -- arithmetic mode                        ; 5       ;
-;     -- shared arithmetic mode                 ; 0       ;
-;                                               ;         ;
-; Estimated ALUT/register pairs used            ; 30      ;
-;                                               ;         ;
-; Total registers                               ; 0       ;
-;     -- Dedicated logic registers              ; 0       ;
-;     -- I/O registers                          ; 0       ;
-;                                               ;         ;
-; Estimated ALMs:  partially or completely used ; 15      ;
-;                                               ;         ;
-; I/O pins                                      ; 15      ;
-; Maximum fan-out node                          ; func[0] ;
-; Maximum fan-out                               ; 11      ;
-; Total fan-out                                 ; 106     ;
-; Average fan-out                               ; 2.79    ;
-+-----------------------------------------------+---------+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++-----------------------------------------------+-----------+
+; Resource                                      ; Usage     ;
++-----------------------------------------------+-----------+
+; Estimated ALUTs Used                          ; 2         ;
+; Dedicated logic registers                     ; 4         ;
+;                                               ;           ;
+; Estimated ALUTs Unavailable                   ; 0         ;
+;                                               ;           ;
+; Total combinational functions                 ; 2         ;
+; Combinational ALUT usage by number of inputs  ;           ;
+;     -- 7 input functions                      ; 0         ;
+;     -- 6 input functions                      ; 0         ;
+;     -- 5 input functions                      ; 0         ;
+;     -- 4 input functions                      ; 0         ;
+;     -- <=3 input functions                    ; 2         ;
+;                                               ;           ;
+; Combinational ALUTs by mode                   ;           ;
+;     -- normal mode                            ; 2         ;
+;     -- extended LUT mode                      ; 0         ;
+;     -- arithmetic mode                        ; 0         ;
+;     -- shared arithmetic mode                 ; 0         ;
+;                                               ;           ;
+; Estimated ALUT/register pairs used            ; 4         ;
+;                                               ;           ;
+; Total registers                               ; 4         ;
+;     -- Dedicated logic registers              ; 4         ;
+;     -- I/O registers                          ; 0         ;
+;                                               ;           ;
+; Estimated ALMs:  partially or completely used ; 2         ;
+;                                               ;           ;
+; I/O pins                                      ; 21        ;
+; Maximum fan-out node                          ; S[0]~reg0 ;
+; Maximum fan-out                               ; 4         ;
+; Total fan-out                                 ; 13        ;
+; Average fan-out                               ; 0.48      ;
++-----------------------------------------------+-----------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -212,23 +212,44 @@ applicable agreement for further details.
 +----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
-; |ULA                       ; 23 (23)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 15   ; 0            ; |ULA                ; work         ;
+; |controle                  ; 2 (2)             ; 4 (4)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 21   ; 0            ; |controle           ; work         ;
 +----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                               ;
-+----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
-+----------------------------------------------------+---------------------+------------------------+
-; Z[0]$latch                                         ; Mux4                ; yes                    ;
-; Z[1]$latch                                         ; Mux4                ; yes                    ;
-; Z[2]$latch                                         ; Mux4                ; yes                    ;
-; Z[3]$latch                                         ; Mux4                ; yes                    ;
-; Number of user-specified and inferred latches = 4  ;                     ;                        ;
-+----------------------------------------------------+---------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; S[3]~reg0                              ; Stuck at GND due to stuck port data_in ;
+; S[2]~reg0                              ; Stuck at GND due to stuck port data_in ;
+; S[1]~reg0                              ; Stuck at GND due to stuck port data_in ;
+; Tula[0]~reg0                           ; Stuck at GND due to stuck port data_in ;
+; Tula[1]~reg0                           ; Stuck at GND due to stuck port data_in ;
+; Tula[2]~reg0                           ; Stuck at GND due to stuck port data_in ;
+; Tula[3]~reg0                           ; Stuck at GND due to stuck port data_in ;
+; Tz[1]~reg0                             ; Stuck at GND due to stuck port data_in ;
+; Tz[3]~reg0                             ; Stuck at GND due to stuck port data_in ;
+; Ty[3]~reg0                             ; Stuck at GND due to stuck port data_in ;
+; Tx[1]~reg0                             ; Stuck at GND due to stuck port data_in ;
+; Tx[3]~reg0                             ; Stuck at GND due to stuck port data_in ;
+; Tx[0]~reg0                             ; Stuck at VCC due to stuck port data_in ;
+; Tx[2]~reg0                             ; Stuck at GND due to stuck port data_in ;
+; Tz[0]~reg0                             ; Stuck at GND due to stuck port data_in ;
+; Ty[1]~reg0                             ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 16 ;                                        ;
++----------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                        ;
++---------------+---------------------------+----------------------------------------+
+; Register name ; Reason for Removal        ; Registers Removed due to This Register ;
++---------------+---------------------------+----------------------------------------+
+; S[3]~reg0     ; Stuck at GND              ; Tz[0]~reg0, Ty[1]~reg0                 ;
+;               ; due to stuck port data_in ;                                        ;
++---------------+---------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -236,7 +257,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 4     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -246,28 +267,24 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 7:1                ; 3 bits    ; 12 ALUTs      ; 9 ALUTs              ; 3 ALUTs                ; No         ; |ULA|Mux1                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-
-
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |ULA ;
-+----------------+-------+--------------------------------------------+
-; Parameter Name ; Value ; Type                                       ;
-+----------------+-------+--------------------------------------------+
-; ADD            ; 000   ; Unsigned Binary                            ;
-; SUB            ; 001   ; Unsigned Binary                            ;
-; MAIOR          ; 010   ; Unsigned Binary                            ;
-; MENOR          ; 011   ; Unsigned Binary                            ;
-; IGUAL          ; 100   ; Unsigned Binary                            ;
-; XOR            ; 101   ; Unsigned Binary                            ;
-; AND            ; 110   ; Unsigned Binary                            ;
-+----------------+-------+--------------------------------------------+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |controle ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; HOLD           ; 000   ; Unsigned Binary                                 ;
+; LOAD           ; 001   ; Unsigned Binary                                 ;
+; SHIFTR         ; 010   ; Unsigned Binary                                 ;
+; SHIFTL         ; 011   ; Unsigned Binary                                 ;
+; RESET          ; 100   ; Unsigned Binary                                 ;
+; ADD            ; 000   ; Unsigned Binary                                 ;
+; SUB            ; 001   ; Unsigned Binary                                 ;
+; MAIOR          ; 010   ; Unsigned Binary                                 ;
+; MENOR          ; 011   ; Unsigned Binary                                 ;
+; IGUAL          ; 100   ; Unsigned Binary                                 ;
+; XOR            ; 101   ; Unsigned Binary                                 ;
+; AND            ; 110   ; Unsigned Binary                                 ;
++----------------+-------+-------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -277,36 +294,50 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
-    Info: Processing started: Mon Jun 10 16:54:15 2019
+    Info: Processing started: Tue Jun 25 15:03:44 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProjetoII -c ProjetoII
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Found 1 design units, including 1 entities, in source file ula.v
     Info: Found entity 1: ULA
-Info: Elaborating entity "ULA" for the top level hierarchy
-Warning (10270): Verilog HDL Case Statement warning at ULA.v(16): incomplete case statement has no default case item
-Warning (10240): Verilog HDL Always Construct warning at ULA.v(16): inferring latch(es) for variable "Z", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "Z[0]" at ULA.v(16)
-Info (10041): Inferred latch for "Z[1]" at ULA.v(16)
-Info (10041): Inferred latch for "Z[2]" at ULA.v(16)
-Info (10041): Inferred latch for "Z[3]" at ULA.v(16)
-Warning: Latch Z[0]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal func[2]
-Warning: Latch Z[1]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal func[2]
-Warning: Latch Z[2]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal func[2]
-Warning: Latch Z[3]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal func[2]
+Info: Found 1 design units, including 1 entities, in source file registradorx.v
+    Info: Found entity 1: registradorX
+Info: Found 1 design units, including 1 entities, in source file registradory.v
+    Info: Found entity 1: registradorY
+Info: Found 1 design units, including 1 entities, in source file registradorz.v
+    Info: Found entity 1: registradorZ
+Info: Found 1 design units, including 1 entities, in source file controle.v
+    Info: Found entity 1: controle
+Info: Elaborating entity "controle" for the top level hierarchy
+Warning: Output pins are stuck at VCC or GND
+    Warning (13410): Pin "S[1]" is stuck at GND
+    Warning (13410): Pin "S[2]" is stuck at GND
+    Warning (13410): Pin "S[3]" is stuck at GND
+    Warning (13410): Pin "Tx[0]" is stuck at VCC
+    Warning (13410): Pin "Tx[1]" is stuck at GND
+    Warning (13410): Pin "Tx[2]" is stuck at GND
+    Warning (13410): Pin "Tx[3]" is stuck at GND
+    Warning (13410): Pin "Ty[1]" is stuck at GND
+    Warning (13410): Pin "Ty[3]" is stuck at GND
+    Warning (13410): Pin "Tz[0]" is stuck at GND
+    Warning (13410): Pin "Tz[1]" is stuck at GND
+    Warning (13410): Pin "Tz[3]" is stuck at GND
+    Warning (13410): Pin "Tula[0]" is stuck at GND
+    Warning (13410): Pin "Tula[1]" is stuck at GND
+    Warning (13410): Pin "Tula[2]" is stuck at GND
+    Warning (13410): Pin "Tula[3]" is stuck at GND
 Warning: Ignored assignments for entity "ProjetoII" -- entity does not exist in design
     Warning: Assignment for entity set_global_assignment -name LL_ROOT_REGION ON -entity ProjetoII -section_id "Root Region" was ignored
     Warning: Assignment for entity set_global_assignment -name LL_MEMBER_STATE LOCKED -entity ProjetoII -section_id "Root Region" was ignored
-Info: Implemented 38 device resources after synthesis - the final resource count might be different
-    Info: Implemented 11 input pins
-    Info: Implemented 4 output pins
-    Info: Implemented 23 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 13 warnings
-    Info: Peak virtual memory: 346 megabytes
-    Info: Processing ended: Mon Jun 10 16:54:16 2019
+Warning: Ignored assignments for entity "ULA" -- entity does not exist in design
+    Warning: Assignment for entity set_global_assignment -name LL_ROOT_REGION ON -entity ULA -section_id "Root Region" was ignored
+    Warning: Assignment for entity set_global_assignment -name LL_MEMBER_STATE LOCKED -entity ULA -section_id "Root Region" was ignored
+Info: Implemented 25 device resources after synthesis - the final resource count might be different
+    Info: Implemented 1 input pins
+    Info: Implemented 20 output pins
+    Info: Implemented 4 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 23 warnings
+    Info: Peak virtual memory: 344 megabytes
+    Info: Processing ended: Tue Jun 25 15:03:45 2019
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

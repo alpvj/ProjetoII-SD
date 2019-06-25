@@ -2,34 +2,24 @@
 Timing Analyzer Summary
 --------------------------------------------------------------------------------------
 
-Type           : Worst-case tsu
-Slack          : N/A
-Required Time  : None
-Actual Time    : 4.746 ns
-From           : A[0]
-To             : Z[1]$latch
-From Clock     : --
-To Clock       : func[2]
-Failed Paths   : 0
-
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 8.667 ns
-From           : Z[2]$latch
-To             : Z[2]
-From Clock     : func[0]
+Actual Time    : 7.160 ns
+From           : S[0]~reg0
+To             : S[0]
+From Clock     : clock
 To Clock       : --
 Failed Paths   : 0
 
-Type           : Worst-case th
+Type           : Clock Setup: 'clock'
 Slack          : N/A
 Required Time  : None
-Actual Time    : -1.324 ns
-From           : func[2]
-To             : Z[0]$latch
-From Clock     : --
-To Clock       : func[0]
+Actual Time    : Restricted to 500.00 MHz ( period = 2.000 ns )
+From           : S[0]~reg0
+To             : Ty[0]~reg0
+From Clock     : clock
+To Clock       : clock
 Failed Paths   : 0
 
 Type           : Total number of failed paths
