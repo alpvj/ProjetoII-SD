@@ -51,7 +51,7 @@ always @(posedge clock)begin
 			end
 			
 		4'b0011 : begin
-			Tx <= LOAD;
+			Tx <= RESET;
 			Ty <= SHIFTR;
 			Tz <= RESET;
 			Tula <= ADD;

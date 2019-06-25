@@ -39,7 +39,7 @@ always @(posedge clock)begin
 		4'b0001 : begin
 			Ty <= LOAD;
 			Tx <= LOAD;
-			Tz <= HOLD;
+			Tz <= HOLD;'
 			Tula <= ADD;
 			end
 			
@@ -51,13 +51,19 @@ always @(posedge clock)begin
 			end
 			
 		4'b0011 : begin
-			Tx <= LOAD;
+			Tx <= RESET;
 			Ty <= SHIFTR;
 			Tz <= RESET;
 			Tula <= ADD;
 			end
 			
-			
+		4'b0100 : begin
+			Tx <= RESET;
+			Ty <= RESET;
+			Tz <= LOAD;
+			Tula <= ADD;
+			end
+				
 	endcase
 end
 endmodule

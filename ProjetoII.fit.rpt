@@ -1,5 +1,5 @@
 Fitter report for ProjetoII
-Tue Jun 25 15:03:48 2019
+Tue Jun 25 15:15:39 2019
 Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
@@ -67,7 +67,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +-------------------------------+-----------------------------------------------+
-; Fitter Status                 ; Successful - Tue Jun 25 15:03:48 2019         ;
+; Fitter Status                 ; Successful - Tue Jun 25 15:15:39 2019         ;
 ; Quartus II 64-Bit Version     ; 9.1 Build 350 03/24/2010 SP 2 SJ Full Version ;
 ; Revision Name                 ; ProjetoII                                     ;
 ; Top-level Entity Name         ; controle                                      ;
@@ -147,12 +147,12 @@ applicable agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.00        ;
+; Average used               ; 2.71        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     1 processor            ; 100.0%      ;
-;     2-4 processors         ; < 0.1%      ;
+;     2-4 processors         ;  25.0%      ;
 +----------------------------+-------------+
 
 
@@ -1247,7 +1247,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Fitter
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
-    Info: Processing started: Tue Jun 25 15:03:46 2019
+    Info: Processing started: Tue Jun 25 15:15:36 2019
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off ProjetoII -c ProjetoII
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Automatically selected device EP2S15F484C3 for design ProjetoII
@@ -1349,8 +1349,8 @@ Warning: The Reserve All Unused Pins setting has not been specified, and will de
 Info: Generated suppressed messages file D:/Users/alpvj/Desktop/ProjetoII-SD/ProjetoII.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 517 megabytes
-    Info: Processing ended: Tue Jun 25 15:03:48 2019
-    Info: Elapsed time: 00:00:02
+    Info: Processing ended: Tue Jun 25 15:15:39 2019
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:03
 
 
