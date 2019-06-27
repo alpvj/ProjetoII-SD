@@ -4,10 +4,10 @@ input wire clock;
 output reg[3:0] outCounter;
 
 parameter START = 4'b0000;
-parameter END = 4'b0100;
+parameter END = 4'b0101;
 
 always @(posedge clock) begin
-	if(outCounter > END)
+	if(outCounter >= END)
 		outCounter = START;
 	else
 		outCounter = (outCounter + 1);

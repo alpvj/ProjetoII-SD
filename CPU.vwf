@@ -796,15 +796,7 @@ TRANSITION_LIST("inX[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1.0;
-		NODE
-		{
-			REPEAT = 83;
-			LEVEL 1 FOR 2.0;
-			LEVEL 0 FOR 10.0;
-		}
-		LEVEL 1 FOR 2.0;
-		LEVEL 0 FOR 1.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -813,7 +805,14 @@ TRANSITION_LIST("inX[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 3.0;
+		NODE
+		{
+			REPEAT = 83;
+			LEVEL 1 FOR 2.0;
+			LEVEL 0 FOR 10.0;
+		}
+		LEVEL 1 FOR 1.0;
 	}
 }
 
@@ -826,10 +825,11 @@ TRANSITION_LIST("inX[1]")
 		NODE
 		{
 			REPEAT = 83;
-			LEVEL 1 FOR 4.0;
-			LEVEL 0 FOR 8.0;
+			LEVEL 1 FOR 2.0;
+			LEVEL 0 FOR 10.0;
 		}
-		LEVEL 1 FOR 3.0;
+		LEVEL 1 FOR 2.0;
+		LEVEL 0 FOR 1.0;
 	}
 }
 
@@ -913,14 +913,15 @@ TRANSITION_LIST("outULA[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 3.0;
+		LEVEL 0 FOR 5.0;
 		NODE
 		{
-			REPEAT = 83;
-			LEVEL 1 FOR 6.0;
-			LEVEL 0 FOR 6.0;
+			REPEAT = 82;
+			LEVEL 1 FOR 4.0;
+			LEVEL 0 FOR 8.0;
 		}
-		LEVEL 1 FOR 1.0;
+		LEVEL 1 FOR 4.0;
+		LEVEL 0 FOR 7.0;
 	}
 }
 
@@ -929,51 +930,19 @@ TRANSITION_LIST("outULA[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 5.0;
+		LEVEL 0 FOR 9.0;
 		NODE
 		{
 			REPEAT = 82;
-			LEVEL 1 FOR 6.0;
-			LEVEL 0 FOR 6.0;
+			LEVEL 1 FOR 2.0;
+			LEVEL 0 FOR 10.0;
 		}
-		LEVEL 1 FOR 6.0;
+		LEVEL 1 FOR 2.0;
 		LEVEL 0 FOR 5.0;
 	}
 }
 
 TRANSITION_LIST("outULA[1]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 3.0;
-		NODE
-		{
-			REPEAT = 83;
-			LEVEL 1 FOR 8.0;
-			LEVEL 0 FOR 4.0;
-		}
-		LEVEL 1 FOR 1.0;
-	}
-}
-
-TRANSITION_LIST("outULA[0]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 3.0;
-		NODE
-		{
-			REPEAT = 166;
-			LEVEL 1 FOR 2.0;
-			LEVEL 0 FOR 4.0;
-		}
-		LEVEL 1 FOR 1.0;
-	}
-}
-
-TRANSITION_LIST("outX[3]")
 {
 	NODE
 	{
@@ -989,12 +958,45 @@ TRANSITION_LIST("outX[3]")
 	}
 }
 
-TRANSITION_LIST("outX[2]")
+TRANSITION_LIST("outULA[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 3.0;
+		NODE
+		{
+			REPEAT = 83;
+			LEVEL 1 FOR 2.0;
+			LEVEL 0 FOR 10.0;
+		}
+		LEVEL 1 FOR 1.0;
+	}
+}
+
+TRANSITION_LIST("outX[3]")
 {
 	NODE
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("outX[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 5.0;
+		NODE
+		{
+			REPEAT = 82;
+			LEVEL 1 FOR 2.0;
+			LEVEL 0 FOR 10.0;
+		}
+		LEVEL 1 FOR 2.0;
+		LEVEL 0 FOR 9.0;
 	}
 }
 
@@ -1007,8 +1009,8 @@ TRANSITION_LIST("outX[1]")
 		NODE
 		{
 			REPEAT = 83;
-			LEVEL 1 FOR 4.0;
-			LEVEL 0 FOR 8.0;
+			LEVEL 1 FOR 2.0;
+			LEVEL 0 FOR 10.0;
 		}
 		LEVEL 1 FOR 1.0;
 	}
@@ -1035,14 +1037,14 @@ TRANSITION_LIST("outY[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 5.0;
+		LEVEL 0 FOR 7.0;
 		NODE
 		{
 			REPEAT = 82;
-			LEVEL 1 FOR 4.0;
-			LEVEL 0 FOR 8.0;
+			LEVEL 1 FOR 2.0;
+			LEVEL 0 FOR 10.0;
 		}
-		LEVEL 1 FOR 4.0;
+		LEVEL 1 FOR 2.0;
 		LEVEL 0 FOR 7.0;
 	}
 }
@@ -1052,14 +1054,14 @@ TRANSITION_LIST("outY[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 7.0;
+		LEVEL 0 FOR 9.0;
 		NODE
 		{
 			REPEAT = 82;
-			LEVEL 1 FOR 4.0;
-			LEVEL 0 FOR 8.0;
+			LEVEL 1 FOR 2.0;
+			LEVEL 0 FOR 10.0;
 		}
-		LEVEL 1 FOR 4.0;
+		LEVEL 1 FOR 2.0;
 		LEVEL 0 FOR 5.0;
 	}
 }
@@ -1073,11 +1075,11 @@ TRANSITION_LIST("outY[1]")
 		NODE
 		{
 			REPEAT = 82;
-			LEVEL 1 FOR 6.0;
-			LEVEL 0 FOR 6.0;
+			LEVEL 1 FOR 2.0;
+			LEVEL 0 FOR 10.0;
 		}
-		LEVEL 1 FOR 6.0;
-		LEVEL 0 FOR 5.0;
+		LEVEL 1 FOR 2.0;
+		LEVEL 0 FOR 9.0;
 	}
 }
 
@@ -1091,14 +1093,10 @@ TRANSITION_LIST("outY[0]")
 		{
 			REPEAT = 82;
 			LEVEL 1 FOR 2.0;
-			LEVEL 0 FOR 2.0;
-			LEVEL 1 FOR 2.0;
-			LEVEL 0 FOR 6.0;
+			LEVEL 0 FOR 10.0;
 		}
 		LEVEL 1 FOR 2.0;
-		LEVEL 0 FOR 2.0;
-		LEVEL 1 FOR 2.0;
-		LEVEL 0 FOR 5.0;
+		LEVEL 0 FOR 9.0;
 	}
 }
 
@@ -1133,15 +1131,7 @@ TRANSITION_LIST("outZ[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 11.0;
-		NODE
-		{
-			REPEAT = 82;
-			LEVEL 1 FOR 4.0;
-			LEVEL 0 FOR 8.0;
-		}
-		LEVEL 1 FOR 4.0;
-		LEVEL 0 FOR 1.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -1150,15 +1140,7 @@ TRANSITION_LIST("outZ[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 11.0;
-		NODE
-		{
-			REPEAT = 82;
-			LEVEL 1 FOR 4.0;
-			LEVEL 0 FOR 8.0;
-		}
-		LEVEL 1 FOR 4.0;
-		LEVEL 0 FOR 1.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 

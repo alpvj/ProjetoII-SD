@@ -1,5 +1,5 @@
-Quartus II 64-Bit
-Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+Quartus II
+Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 7
 3700
 OFF
@@ -20,10 +20,120 @@ VHSM_ON
 -- Start VHDL Libraries --
 -- End VHDL Libraries --
 # entity
+registradorX
+# storage
+db|ProjetoII.(4).cnf
+db|ProjetoII.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+registradorx.v
+c99cbb88417436bd674bb54ac80716c
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+HOLD
+000
+PARAMETER_UNSIGNED_BIN
+DEF
+LOAD
+001
+PARAMETER_UNSIGNED_BIN
+DEF
+SHIFTR
+010
+PARAMETER_UNSIGNED_BIN
+DEF
+SHIFTL
+011
+PARAMETER_UNSIGNED_BIN
+DEF
+RESET
+100
+PARAMETER_UNSIGNED_BIN
+DEF
+}
+# macro_sequence
+
+# end
+# entity
+registradorY
+# storage
+db|ProjetoII.(5).cnf
+db|ProjetoII.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+registradory.v
+358b3de326589d1db89666138daeeea1
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+HOLD
+000
+PARAMETER_UNSIGNED_BIN
+DEF
+LOAD
+001
+PARAMETER_UNSIGNED_BIN
+DEF
+SHIFTR
+010
+PARAMETER_UNSIGNED_BIN
+DEF
+SHIFTL
+011
+PARAMETER_UNSIGNED_BIN
+DEF
+RESET
+100
+PARAMETER_UNSIGNED_BIN
+DEF
+}
+# macro_sequence
+
+# end
+# entity
 registradorZ
 # storage
-db|ProjetoII.(3).cnf
-db|ProjetoII.(3).cnf
+db|ProjetoII.(6).cnf
+db|ProjetoII.(6).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -71,63 +181,14 @@ RESET
 PARAMETER_UNSIGNED_BIN
 DEF
 }
-# hierarchies {
-registradorZ:registZ
-}
-# macro_sequence
-
-# end
-# entity
-counter
-# storage
-db|ProjetoII.(0).cnf
-db|ProjetoII.(0).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-counter.v
-aff3f8edeb31884fea13b488ffee3b9
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# user_parameter {
-START
-0000
-PARAMETER_UNSIGNED_BIN
-DEF
-END
-0100
-PARAMETER_UNSIGNED_BIN
-DEF
-}
-# hierarchies {
-counter:comb_3
-}
 # macro_sequence
 
 # end
 # entity
 ULA
 # storage
-db|ProjetoII.(1).cnf
-db|ProjetoII.(1).cnf
+db|ProjetoII.(7).cnf
+db|ProjetoII.(7).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -183,25 +244,55 @@ AND
 PARAMETER_UNSIGNED_BIN
 DEF
 }
-# hierarchies {
-ULA:ula
-}
 # macro_sequence
 
 # end
 # entity
-registradorX
+CPU
 # storage
-db|ProjetoII.(2).cnf
-db|ProjetoII.(2).cnf
+db|ProjetoII.(3).cnf
+db|ProjetoII.(3).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
 }
 # case_sensitive
 # source_file
-registradorx.v
-c99cbb88417436bd674bb54ac80716c
+cpu.v
+76b99dde8d172e1e598c771a929dbe
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# macro_sequence
+
+# end
+# entity
+counter
+# storage
+db|ProjetoII.(0).cnf
+db|ProjetoII.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+counter.v
+34af52dc682ddeaf72f4bb4098e2fe6f
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -220,133 +311,14 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 250
 }
 # user_parameter {
-HOLD
-000
+START
+0000
 PARAMETER_UNSIGNED_BIN
 DEF
-LOAD
-001
+END
+0101
 PARAMETER_UNSIGNED_BIN
 DEF
-SHIFTR
-010
-PARAMETER_UNSIGNED_BIN
-DEF
-SHIFTL
-011
-PARAMETER_UNSIGNED_BIN
-DEF
-RESET
-100
-PARAMETER_UNSIGNED_BIN
-DEF
-}
-# hierarchies {
-registradorX:registX
-}
-# macro_sequence
-
-# end
-# entity
-registradorY
-# storage
-db|ProjetoII.(4).cnf
-db|ProjetoII.(4).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-registradory.v
-358b3de326589d1db89666138daeeea1
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# user_parameter {
-HOLD
-000
-PARAMETER_UNSIGNED_BIN
-DEF
-LOAD
-001
-PARAMETER_UNSIGNED_BIN
-DEF
-SHIFTR
-010
-PARAMETER_UNSIGNED_BIN
-DEF
-SHIFTL
-011
-PARAMETER_UNSIGNED_BIN
-DEF
-RESET
-100
-PARAMETER_UNSIGNED_BIN
-DEF
-}
-# hierarchies {
-registradorY:registY
-}
-# macro_sequence
-
-# end
-# entity
-memoria
-# storage
-db|ProjetoII.(5).cnf
-db|ProjetoII.(5).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-memoria.v
-40dcd821abaa8e413a5f6fad374844
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# user_parameter {
-A
-5
-PARAMETER_SIGNED_DEC
-DEF
-B
-3
-PARAMETER_SIGNED_DEC
-DEF
-}
-# hierarchies {
-memoria:comb_4
 }
 # macro_sequence
 
@@ -354,8 +326,8 @@ memoria:comb_4
 # entity
 controle
 # storage
-db|ProjetoII.(6).cnf
-db|ProjetoII.(6).cnf
+db|ProjetoII.(1).cnf
+db|ProjetoII.(1).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -363,7 +335,7 @@ ON
 # case_sensitive
 # source_file
 controle.v
-9ac19a74e041495f7e19244a7f367965
+bd91d699cb8df0e84afa14798233d44
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -431,25 +403,22 @@ AND
 PARAMETER_UNSIGNED_BIN
 DEF
 }
-# hierarchies {
-controle:cont
-}
 # macro_sequence
 
 # end
 # entity
-CPU
+memoria
 # storage
-db|ProjetoII.(7).cnf
-db|ProjetoII.(7).cnf
+db|ProjetoII.(2).cnf
+db|ProjetoII.(2).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
 }
 # case_sensitive
 # source_file
-cpu.v
-589014aff5465b49c8b96f7ae3518b84
+memoria.v
+69ab614a77d6e67384ba2a7144d3af
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -466,6 +435,16 @@ VERILOG_CONSTANT_LOOP_LIMIT
 5000
 VERILOG_NON_CONSTANT_LOOP_LIMIT
 250
+}
+# user_parameter {
+A
+3
+PARAMETER_SIGNED_DEC
+DEF
+B
+5
+PARAMETER_SIGNED_DEC
+DEF
 }
 # hierarchies {
 |
