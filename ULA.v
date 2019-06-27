@@ -1,8 +1,8 @@
-module ULA(func, A, B, Z);
+module ULA(funcULA, A, B, outULA);
 
 input wire [3:0] A, B;
-input wire [2:0] func;
-output reg [3:0] Z;
+input wire [2:0] funcULA;
+output reg [3:0] outULA;
 
 parameter ADD = 3'b000;
 parameter SUB = 3'b001;
@@ -13,21 +13,21 @@ parameter XOR = 3'b101;
 parameter AND = 3'b110;
 
 always begin
-	case(func)
+	case(funcULA)
 		ADD:
-			Z <= (A + B);
+			outULA <= (A + B);
 		SUB:
-			Z <= (A - B);
+			outULA <= (A - B);
 		MAIOR:
-			Z <= (A > B);
+			outULA <= (A > B);
 		MENOR:
-			Z <= (A < B);
+			outULA <= (A < B);
 		IGUAL:
-			Z <= (A == B);
+			outULA <= (A == B);
 		XOR:
-			Z <= (A ^ B);
+			outULA <= (A ^ B);
 		AND:
-			Z <= (A & B);
+			outULA <= (A & B);
 	endcase
 end
 endmodule

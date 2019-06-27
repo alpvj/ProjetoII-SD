@@ -1,8 +1,8 @@
-module registradorX(clock, func, in, outX);
+module registradorX(clock, func, inX, outX);
 
 input wire clock;
 input wire [2:0] func;
-input wire [3:0] in;
+input wire [3:0] inX;
 output reg [3:0] outX;
 
 parameter HOLD = 3'b000;
@@ -16,7 +16,7 @@ always @(posedge clock)begin
 		HOLD:
 			outX <= outX;
 		LOAD:
-			outX <= in;
+			outX <= inX;
 		SHIFTR:
 			outX <= outX >> 1;
 		SHIFTL:

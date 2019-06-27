@@ -1,8 +1,7 @@
-module controle(S, Tx, Ty, Tz, Tula, clock);
+module controle(count, Tx, Ty, Tz, Tula);
 
-input wire clock;
+input wire [3:0] count;
 
-output reg [3:0] S;
 output reg [3:0] Tula;
 output reg [3:0] Tx;
 output reg [3:0] Ty;
@@ -22,14 +21,9 @@ parameter IGUAL = 3'b100;
 parameter XOR = 3'b101;
 parameter AND = 3'b110;
 
-initial begin
-	S <= 4'b0000;
-end
-
-always @(posedge clock)begin
-	case(S)
+always begin
+	case(count)
 		4'b0000 : begin
-			S <= 4'b0001;
 			Ty <= RESET;
 			Tx <= LOAD;
 			Tz <= RESET;

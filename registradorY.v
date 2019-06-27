@@ -1,8 +1,8 @@
-module registradorY(clock, func, outX, outY);
+module registradorY(clock, func, outULA, outY);
 
 input wire clock;
 input wire [2:0] func;
-input wire [3:0] outX;
+input wire [3:0] outULA;
 output reg [3:0] outY;
 
 parameter HOLD = 3'b000;
@@ -16,7 +16,7 @@ always @(posedge clock)begin
 		HOLD:
 			outY <= outY;
 		LOAD:
-			outY <= outX;
+			outY <= outULA;
 		SHIFTR:
 			outY <= outY >> 1;
 		SHIFTL:

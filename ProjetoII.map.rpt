@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ProjetoII
-Tue Jun 25 15:15:35 2019
+Thu Jun 27 09:49:15 2019
 Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
@@ -13,11 +13,19 @@ Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Versio
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. Removed Registers Triggering Further Register Optimizations
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
  10. General Register Statistics
- 11. Parameter Settings for User Entity Instance: Top-level Entity: |controle
- 12. Analysis & Synthesis Messages
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: counter:comb_3
+ 13. Parameter Settings for User Entity Instance: memoria:comb_4
+ 14. Parameter Settings for User Entity Instance: controle:cont
+ 15. Parameter Settings for User Entity Instance: registradorX:registX
+ 16. Parameter Settings for User Entity Instance: registradorY:registY
+ 17. Parameter Settings for User Entity Instance: registradorZ:registZ
+ 18. Parameter Settings for User Entity Instance: ULA:ula
+ 19. Port Connectivity Checks: "controle:cont"
+ 20. Analysis & Synthesis Messages
 
 
 
@@ -43,16 +51,16 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +-------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status   ; Successful - Tue Jun 25 15:15:35 2019         ;
+; Analysis & Synthesis Status   ; Successful - Thu Jun 27 09:49:15 2019         ;
 ; Quartus II 64-Bit Version     ; 9.1 Build 350 03/24/2010 SP 2 SJ Full Version ;
 ; Revision Name                 ; ProjetoII                                     ;
-; Top-level Entity Name         ; controle                                      ;
+; Top-level Entity Name         ; CPU                                           ;
 ; Family                        ; Stratix II                                    ;
 ; Logic utilization             ; N/A                                           ;
-;     Combinational ALUTs       ; 2                                             ;
-;     Dedicated logic registers ; 4                                             ;
-; Total registers               ; 4                                             ;
-; Total pins                    ; 21                                            ;
+;     Combinational ALUTs       ; 37                                            ;
+;     Dedicated logic registers ; 14                                            ;
+; Total registers               ; 14                                            ;
+; Total pins                    ; 37                                            ;
 ; Total virtual pins            ; 0                                             ;
 ; Total block memory bits       ; 0                                             ;
 ; DSP block 9-bit elements      ; 0                                             ;
@@ -66,7 +74,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
-; Top-level entity name                                                      ; controle           ; ProjetoII          ;
+; Top-level entity name                                                      ; CPU                ; ProjetoII          ;
 ; Family name                                                                ; Stratix II         ; Stratix II         ;
 ; Use Generated Physical Constraints File                                    ; Off                ;                    ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
@@ -158,98 +166,108 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                       ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                   ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------+
-; controle.v                       ; yes             ; User Verilog HDL File  ; D:/Users/alpvj/Desktop/ProjetoII-SD/controle.v ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                           ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                       ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------+
+; ULA.v                            ; yes             ; User Verilog HDL File  ; D:/Users/alpvj/Desktop/ProjetoII-SD/ULA.v          ;
+; registradorX.v                   ; yes             ; User Verilog HDL File  ; D:/Users/alpvj/Desktop/ProjetoII-SD/registradorX.v ;
+; registradorY.v                   ; yes             ; User Verilog HDL File  ; D:/Users/alpvj/Desktop/ProjetoII-SD/registradorY.v ;
+; registradorZ.v                   ; yes             ; User Verilog HDL File  ; D:/Users/alpvj/Desktop/ProjetoII-SD/registradorZ.v ;
+; controle.v                       ; yes             ; User Verilog HDL File  ; D:/Users/alpvj/Desktop/ProjetoII-SD/controle.v     ;
+; memoria.v                        ; yes             ; User Verilog HDL File  ; D:/Users/alpvj/Desktop/ProjetoII-SD/memoria.v      ;
+; counter.v                        ; yes             ; User Verilog HDL File  ; D:/Users/alpvj/Desktop/ProjetoII-SD/counter.v      ;
+; CPU.v                            ; yes             ; User Verilog HDL File  ; D:/Users/alpvj/Desktop/ProjetoII-SD/CPU.v          ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------+
 
 
-+-----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary               ;
-+-----------------------------------------------+-----------+
-; Resource                                      ; Usage     ;
-+-----------------------------------------------+-----------+
-; Estimated ALUTs Used                          ; 2         ;
-; Dedicated logic registers                     ; 4         ;
-;                                               ;           ;
-; Estimated ALUTs Unavailable                   ; 0         ;
-;                                               ;           ;
-; Total combinational functions                 ; 2         ;
-; Combinational ALUT usage by number of inputs  ;           ;
-;     -- 7 input functions                      ; 0         ;
-;     -- 6 input functions                      ; 0         ;
-;     -- 5 input functions                      ; 0         ;
-;     -- 4 input functions                      ; 0         ;
-;     -- <=3 input functions                    ; 2         ;
-;                                               ;           ;
-; Combinational ALUTs by mode                   ;           ;
-;     -- normal mode                            ; 2         ;
-;     -- extended LUT mode                      ; 0         ;
-;     -- arithmetic mode                        ; 0         ;
-;     -- shared arithmetic mode                 ; 0         ;
-;                                               ;           ;
-; Estimated ALUT/register pairs used            ; 4         ;
-;                                               ;           ;
-; Total registers                               ; 4         ;
-;     -- Dedicated logic registers              ; 4         ;
-;     -- I/O registers                          ; 0         ;
-;                                               ;           ;
-; Estimated ALMs:  partially or completely used ; 2         ;
-;                                               ;           ;
-; I/O pins                                      ; 21        ;
-; Maximum fan-out node                          ; S[0]~reg0 ;
-; Maximum fan-out                               ; 4         ;
-; Total fan-out                                 ; 13        ;
-; Average fan-out                               ; 0.48      ;
-+-----------------------------------------------+-----------+
++-------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary           ;
++-----------------------------------------------+-------+
+; Resource                                      ; Usage ;
++-----------------------------------------------+-------+
+; Estimated ALUTs Used                          ; 37    ;
+; Dedicated logic registers                     ; 14    ;
+;                                               ;       ;
+; Estimated ALUTs Unavailable                   ; 1     ;
+;                                               ;       ;
+; Total combinational functions                 ; 37    ;
+; Combinational ALUT usage by number of inputs  ;       ;
+;     -- 7 input functions                      ; 1     ;
+;     -- 6 input functions                      ; 0     ;
+;     -- 5 input functions                      ; 1     ;
+;     -- 4 input functions                      ; 2     ;
+;     -- <=3 input functions                    ; 33    ;
+;                                               ;       ;
+; Combinational ALUTs by mode                   ;       ;
+;     -- normal mode                            ; 32    ;
+;     -- extended LUT mode                      ; 1     ;
+;     -- arithmetic mode                        ; 4     ;
+;     -- shared arithmetic mode                 ; 0     ;
+;                                               ;       ;
+; Estimated ALUT/register pairs used            ; 38    ;
+;                                               ;       ;
+; Total registers                               ; 14    ;
+;     -- Dedicated logic registers              ; 14    ;
+;     -- I/O registers                          ; 0     ;
+;                                               ;       ;
+; Estimated ALMs:  partially or completely used ; 19    ;
+;                                               ;       ;
+; I/O pins                                      ; 37    ;
+; Maximum fan-out node                          ; clock ;
+; Maximum fan-out                               ; 14    ;
+; Total fan-out                                 ; 170   ;
+; Average fan-out                               ; 1.93  ;
++-----------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                           ;
-+----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
-; |controle                  ; 2 (2)             ; 4 (4)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 21   ; 0            ; |controle           ; work         ;
-+----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                 ;
++----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+---------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name       ; Library Name ;
++----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+---------------------------+--------------+
+; |CPU                       ; 37 (0)            ; 14 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 37   ; 0            ; |CPU                      ; work         ;
+;    |ULA:ula|               ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |CPU|ULA:ula              ; work         ;
+;    |controle:cont|         ; 12 (12)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |CPU|controle:cont        ; work         ;
+;    |counter:comb_3|        ; 4 (4)             ; 3 (3)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |CPU|counter:comb_3       ;              ;
+;    |memoria:comb_4|        ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |CPU|memoria:comb_4       ;              ;
+;    |registradorX:registX|  ; 3 (3)             ; 3 (3)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |CPU|registradorX:registX ; work         ;
+;    |registradorY:registY|  ; 5 (5)             ; 4 (4)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |CPU|registradorY:registY ; work         ;
+;    |registradorZ:registZ|  ; 5 (5)             ; 4 (4)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |CPU|registradorZ:registZ ; work         ;
++----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+---------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+----------------------------------------+----------------------------------------+
-; Register name                          ; Reason for Removal                     ;
-+----------------------------------------+----------------------------------------+
-; S[3]~reg0                              ; Stuck at GND due to stuck port data_in ;
-; S[2]~reg0                              ; Stuck at GND due to stuck port data_in ;
-; S[1]~reg0                              ; Stuck at GND due to stuck port data_in ;
-; Tula[0]~reg0                           ; Stuck at GND due to stuck port data_in ;
-; Tula[1]~reg0                           ; Stuck at GND due to stuck port data_in ;
-; Tula[2]~reg0                           ; Stuck at GND due to stuck port data_in ;
-; Tula[3]~reg0                           ; Stuck at GND due to stuck port data_in ;
-; Tz[1]~reg0                             ; Stuck at GND due to stuck port data_in ;
-; Tz[3]~reg0                             ; Stuck at GND due to stuck port data_in ;
-; Ty[3]~reg0                             ; Stuck at GND due to stuck port data_in ;
-; Tx[1]~reg0                             ; Stuck at GND due to stuck port data_in ;
-; Tx[3]~reg0                             ; Stuck at GND due to stuck port data_in ;
-; Tx[0]~reg0                             ; Stuck at VCC due to stuck port data_in ;
-; Tx[2]~reg0                             ; Stuck at GND due to stuck port data_in ;
-; Tz[0]~reg0                             ; Stuck at GND due to stuck port data_in ;
-; Ty[1]~reg0                             ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 16 ;                                        ;
-+----------------------------------------+----------------------------------------+
++------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                  ;
++-----------------------------------------------------+-----------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal   ; Free of Timing Hazards ;
++-----------------------------------------------------+-----------------------+------------------------+
+; controle:cont|Tx[0]                                 ; controle:cont|WideOr1 ; yes                    ;
+; controle:cont|Tx[2]                                 ; controle:cont|WideOr1 ; yes                    ;
+; controle:cont|Ty[0]                                 ; controle:cont|WideOr1 ; yes                    ;
+; controle:cont|Ty[1]                                 ; controle:cont|WideOr1 ; yes                    ;
+; controle:cont|Ty[2]                                 ; controle:cont|WideOr1 ; yes                    ;
+; controle:cont|Tz[0]                                 ; controle:cont|WideOr1 ; yes                    ;
+; controle:cont|Tz[2]                                 ; controle:cont|WideOr1 ; yes                    ;
+; memoria:comb_4|inX[0]                               ; controle:cont|WideOr1 ; yes                    ;
+; memoria:comb_4|inX[1]                               ; controle:cont|WideOr1 ; yes                    ;
+; memoria:comb_4|inX[2]                               ; controle:cont|WideOr1 ; yes                    ;
+; Number of user-specified and inferred latches = 10  ;                       ;                        ;
++-----------------------------------------------------+-----------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                        ;
-+---------------+---------------------------+----------------------------------------+
-; Register name ; Reason for Removal        ; Registers Removed due to This Register ;
-+---------------+---------------------------+----------------------------------------+
-; S[3]~reg0     ; Stuck at GND              ; Tz[0]~reg0, Ty[1]~reg0                 ;
-;               ; due to stuck port data_in ;                                        ;
-+---------------+---------------------------+----------------------------------------+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; registradorX:registX|outX[3]          ; Stuck at GND due to stuck port data_in ;
+; counter:comb_3|outCounter[3]          ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 2 ;                                        ;
++---------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -257,35 +275,137 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 4     ;
+; Total registers                              ; 14    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 10    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |controle ;
-+----------------+-------+-------------------------------------------------+
-; Parameter Name ; Value ; Type                                            ;
-+----------------+-------+-------------------------------------------------+
-; HOLD           ; 000   ; Unsigned Binary                                 ;
-; LOAD           ; 001   ; Unsigned Binary                                 ;
-; SHIFTR         ; 010   ; Unsigned Binary                                 ;
-; SHIFTL         ; 011   ; Unsigned Binary                                 ;
-; RESET          ; 100   ; Unsigned Binary                                 ;
-; ADD            ; 000   ; Unsigned Binary                                 ;
-; SUB            ; 001   ; Unsigned Binary                                 ;
-; MAIOR          ; 010   ; Unsigned Binary                                 ;
-; MENOR          ; 011   ; Unsigned Binary                                 ;
-; IGUAL          ; 100   ; Unsigned Binary                                 ;
-; XOR            ; 101   ; Unsigned Binary                                 ;
-; AND            ; 110   ; Unsigned Binary                                 ;
-+----------------+-------+-------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+; 4:1                ; 3 bits    ; 6 ALUTs       ; 3 ALUTs              ; 3 ALUTs                ; Yes        ; |CPU|registradorX:registX|outX[2] ;
+; 4:1                ; 4 bits    ; 8 ALUTs       ; 4 ALUTs              ; 4 ALUTs                ; Yes        ; |CPU|registradorZ:registZ|outZ[0] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter:comb_3 ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; START          ; 0000  ; Unsigned Binary                    ;
+; END            ; 0100  ; Unsigned Binary                    ;
++----------------+-------+------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: memoria:comb_4 ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; A              ; 5     ; Signed Integer                     ;
+; B              ; 3     ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: controle:cont ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; HOLD           ; 000   ; Unsigned Binary                   ;
+; LOAD           ; 001   ; Unsigned Binary                   ;
+; SHIFTR         ; 010   ; Unsigned Binary                   ;
+; SHIFTL         ; 011   ; Unsigned Binary                   ;
+; RESET          ; 100   ; Unsigned Binary                   ;
+; ADD            ; 000   ; Unsigned Binary                   ;
+; SUB            ; 001   ; Unsigned Binary                   ;
+; MAIOR          ; 010   ; Unsigned Binary                   ;
+; MENOR          ; 011   ; Unsigned Binary                   ;
+; IGUAL          ; 100   ; Unsigned Binary                   ;
+; XOR            ; 101   ; Unsigned Binary                   ;
+; AND            ; 110   ; Unsigned Binary                   ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registradorX:registX ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; HOLD           ; 000   ; Unsigned Binary                          ;
+; LOAD           ; 001   ; Unsigned Binary                          ;
+; SHIFTR         ; 010   ; Unsigned Binary                          ;
+; SHIFTL         ; 011   ; Unsigned Binary                          ;
+; RESET          ; 100   ; Unsigned Binary                          ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registradorY:registY ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; HOLD           ; 000   ; Unsigned Binary                          ;
+; LOAD           ; 001   ; Unsigned Binary                          ;
+; SHIFTR         ; 010   ; Unsigned Binary                          ;
+; SHIFTL         ; 011   ; Unsigned Binary                          ;
+; RESET          ; 100   ; Unsigned Binary                          ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registradorZ:registZ ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; HOLD           ; 000   ; Unsigned Binary                          ;
+; LOAD           ; 001   ; Unsigned Binary                          ;
+; SHIFTR         ; 010   ; Unsigned Binary                          ;
+; SHIFTL         ; 011   ; Unsigned Binary                          ;
+; RESET          ; 100   ; Unsigned Binary                          ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ULA:ula ;
++----------------+-------+-----------------------------+
+; Parameter Name ; Value ; Type                        ;
++----------------+-------+-----------------------------+
+; ADD            ; 000   ; Unsigned Binary             ;
+; SUB            ; 001   ; Unsigned Binary             ;
+; MAIOR          ; 010   ; Unsigned Binary             ;
+; MENOR          ; 011   ; Unsigned Binary             ;
+; IGUAL          ; 100   ; Unsigned Binary             ;
+; XOR            ; 101   ; Unsigned Binary             ;
+; AND            ; 110   ; Unsigned Binary             ;
++----------------+-------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "controle:cont"                                                                                                          ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                 ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
+; Tx   ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (3 bits) it drives; bit(s) "Tx[3..3]" have no fanouts   ;
+; Ty   ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (3 bits) it drives; bit(s) "Ty[3..3]" have no fanouts   ;
+; Tz   ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (3 bits) it drives; bit(s) "Tz[3..3]" have no fanouts   ;
+; Tula ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (3 bits) it drives; bit(s) "Tula[3..3]" have no fanouts ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -294,7 +414,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
-    Info: Processing started: Tue Jun 25 15:15:35 2019
+    Info: Processing started: Thu Jun 27 09:49:14 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProjetoII -c ProjetoII
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Found 1 design units, including 1 entities, in source file ula.v
@@ -307,38 +427,105 @@ Info: Found 1 design units, including 1 entities, in source file registradorz.v
     Info: Found entity 1: registradorZ
 Info: Found 1 design units, including 1 entities, in source file controle.v
     Info: Found entity 1: controle
-Info: Elaborating entity "controle" for the top level hierarchy
+Info: Found 1 design units, including 1 entities, in source file memoria.v
+    Info: Found entity 1: memoria
+Info: Found 1 design units, including 1 entities, in source file counter.v
+    Info: Found entity 1: counter
+Info: Found 1 design units, including 1 entities, in source file cpu.v
+    Info: Found entity 1: CPU
+Critical Warning (10846): Verilog HDL Instantiation warning at CPU.v(16): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at CPU.v(17): instance has no name
+Info: Elaborating entity "CPU" for the top level hierarchy
+Info: Elaborating entity "counter" for hierarchy "counter:comb_3"
+Warning (10230): Verilog HDL assignment warning at counter.v(13): truncated value with size 32 to match size of target (4)
+Info: Elaborating entity "memoria" for hierarchy "memoria:comb_4"
+Warning (10230): Verilog HDL assignment warning at memoria.v(12): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at memoria.v(16): truncated value with size 32 to match size of target (4)
+Warning (10270): Verilog HDL Case Statement warning at memoria.v(10): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at memoria.v(10): inferring latch(es) for variable "inX", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "inX[0]" at memoria.v(10)
+Info (10041): Inferred latch for "inX[1]" at memoria.v(10)
+Info (10041): Inferred latch for "inX[2]" at memoria.v(10)
+Info (10041): Inferred latch for "inX[3]" at memoria.v(10)
+Info: Elaborating entity "controle" for hierarchy "controle:cont"
+Warning (10270): Verilog HDL Case Statement warning at controle.v(25): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at controle.v(25): inferring latch(es) for variable "Tx", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at controle.v(25): inferring latch(es) for variable "Ty", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at controle.v(25): inferring latch(es) for variable "Tz", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at controle.v(25): inferring latch(es) for variable "Tula", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "Tula[0]" at controle.v(25)
+Info (10041): Inferred latch for "Tula[1]" at controle.v(25)
+Info (10041): Inferred latch for "Tula[2]" at controle.v(25)
+Info (10041): Inferred latch for "Tula[3]" at controle.v(25)
+Info (10041): Inferred latch for "Tz[0]" at controle.v(25)
+Info (10041): Inferred latch for "Tz[1]" at controle.v(25)
+Info (10041): Inferred latch for "Tz[2]" at controle.v(25)
+Info (10041): Inferred latch for "Tz[3]" at controle.v(25)
+Info (10041): Inferred latch for "Ty[0]" at controle.v(25)
+Info (10041): Inferred latch for "Ty[1]" at controle.v(25)
+Info (10041): Inferred latch for "Ty[2]" at controle.v(25)
+Info (10041): Inferred latch for "Ty[3]" at controle.v(25)
+Info (10041): Inferred latch for "Tx[0]" at controle.v(25)
+Info (10041): Inferred latch for "Tx[1]" at controle.v(25)
+Info (10041): Inferred latch for "Tx[2]" at controle.v(25)
+Info (10041): Inferred latch for "Tx[3]" at controle.v(25)
+Info: Elaborating entity "registradorX" for hierarchy "registradorX:registX"
+Info: Elaborating entity "registradorY" for hierarchy "registradorY:registY"
+Info: Elaborating entity "registradorZ" for hierarchy "registradorZ:registZ"
+Info: Elaborating entity "ULA" for hierarchy "ULA:ula"
+Warning (10270): Verilog HDL Case Statement warning at ULA.v(16): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at ULA.v(16): inferring latch(es) for variable "outULA", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "outULA[0]" at ULA.v(16)
+Info (10041): Inferred latch for "outULA[1]" at ULA.v(16)
+Info (10041): Inferred latch for "outULA[2]" at ULA.v(16)
+Info (10041): Inferred latch for "outULA[3]" at ULA.v(16)
+Warning: LATCH primitive "ULA:ula|outULA[0]" is permanently enabled
+Warning: LATCH primitive "ULA:ula|outULA[1]" is permanently enabled
+Warning: LATCH primitive "ULA:ula|outULA[2]" is permanently enabled
+Warning: LATCH primitive "ULA:ula|outULA[3]" is permanently enabled
+Warning: 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning: Latch controle:cont|Tx[0] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal counter:comb_3|outCounter[1]
+Warning: Latch controle:cont|Tx[2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal counter:comb_3|outCounter[1]
+Warning: Latch controle:cont|Ty[0] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal counter:comb_3|outCounter[0]
+Warning: Latch controle:cont|Ty[1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal counter:comb_3|outCounter[0]
+Warning: Latch controle:cont|Ty[2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal counter:comb_3|outCounter[0]
+Warning: Latch controle:cont|Tz[0] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal counter:comb_3|outCounter[2]
+Warning: Latch controle:cont|Tz[2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal counter:comb_3|outCounter[1]
+Warning: Latch memoria:comb_4|inX[0] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal counter:comb_3|outCounter[1]
+Warning: Latch memoria:comb_4|inX[1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal counter:comb_3|outCounter[0]
+Warning: Latch memoria:comb_4|inX[2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal counter:comb_3|outCounter[0]
+Info: Duplicate LATCH primitives merged into single LATCH primitive
+    Info: Duplicate LATCH primitive "memoria:comb_4|inX[0]" merged with LATCH primitive "controle:cont|Tx[0]"
 Warning: Output pins are stuck at VCC or GND
-    Warning (13410): Pin "S[1]" is stuck at GND
-    Warning (13410): Pin "S[2]" is stuck at GND
-    Warning (13410): Pin "S[3]" is stuck at GND
-    Warning (13410): Pin "Tx[0]" is stuck at VCC
     Warning (13410): Pin "Tx[1]" is stuck at GND
-    Warning (13410): Pin "Tx[2]" is stuck at GND
-    Warning (13410): Pin "Tx[3]" is stuck at GND
-    Warning (13410): Pin "Ty[1]" is stuck at GND
-    Warning (13410): Pin "Ty[3]" is stuck at GND
-    Warning (13410): Pin "Tz[0]" is stuck at GND
     Warning (13410): Pin "Tz[1]" is stuck at GND
-    Warning (13410): Pin "Tz[3]" is stuck at GND
     Warning (13410): Pin "Tula[0]" is stuck at GND
     Warning (13410): Pin "Tula[1]" is stuck at GND
     Warning (13410): Pin "Tula[2]" is stuck at GND
-    Warning (13410): Pin "Tula[3]" is stuck at GND
+    Warning (13410): Pin "outX[3]" is stuck at GND
+    Warning (13410): Pin "inX[3]" is stuck at GND
+    Warning (13410): Pin "count[3]" is stuck at GND
 Warning: Ignored assignments for entity "ProjetoII" -- entity does not exist in design
     Warning: Assignment for entity set_global_assignment -name LL_ROOT_REGION ON -entity ProjetoII -section_id "Root Region" was ignored
     Warning: Assignment for entity set_global_assignment -name LL_MEMBER_STATE LOCKED -entity ProjetoII -section_id "Root Region" was ignored
-Warning: Ignored assignments for entity "ULA" -- entity does not exist in design
-    Warning: Assignment for entity set_global_assignment -name LL_ROOT_REGION ON -entity ULA -section_id "Root Region" was ignored
-    Warning: Assignment for entity set_global_assignment -name LL_MEMBER_STATE LOCKED -entity ULA -section_id "Root Region" was ignored
-Info: Implemented 25 device resources after synthesis - the final resource count might be different
+Info: Implemented 75 device resources after synthesis - the final resource count might be different
     Info: Implemented 1 input pins
-    Info: Implemented 20 output pins
-    Info: Implemented 4 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 23 warnings
-    Info: Peak virtual memory: 344 megabytes
-    Info: Processing ended: Tue Jun 25 15:15:35 2019
-    Info: Elapsed time: 00:00:00
+    Info: Implemented 36 output pins
+    Info: Implemented 38 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 51 warnings
+    Info: Peak virtual memory: 349 megabytes
+    Info: Processing ended: Thu Jun 27 09:49:15 2019
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

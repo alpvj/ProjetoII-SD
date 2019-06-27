@@ -18,9 +18,9 @@ always @(posedge clock)begin
 		LOAD:
 			outX <= in;
 		SHIFTR:
-			outX <= out >> 1;
+			outX <= outX >> 1;
 		SHIFTL:
-			outX <= out << 1;
+			outX <= outX << 1;
 		RESET:
 			outX <= 4'b0000;
 	endcase

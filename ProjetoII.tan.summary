@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 7.160 ns
-From           : S[0]~reg0
-To             : S[0]
+Actual Time    : 11.520 ns
+From           : controle:cont|Ty[0]
+To             : Ty[0]
 From Clock     : clock
 To Clock       : --
 Failed Paths   : 0
@@ -15,12 +15,22 @@ Failed Paths   : 0
 Type           : Clock Setup: 'clock'
 Slack          : N/A
 Required Time  : None
-Actual Time    : Restricted to 500.00 MHz ( period = 2.000 ns )
-From           : S[0]~reg0
-To             : Ty[0]~reg0
+Actual Time    : 166.33 MHz ( period = 6.012 ns )
+From           : controle:cont|Ty[1]
+To             : registradorY:registY|outY[3]
 From Clock     : clock
 To Clock       : clock
 Failed Paths   : 0
+
+Type           : Clock Hold: 'clock'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : counter:comb_3|outCounter[2]
+To             : controle:cont|Tz[0]
+From Clock     : clock
+To Clock       : clock
+Failed Paths   : 19
 
 Type           : Total number of failed paths
 Slack          : 
@@ -30,7 +40,7 @@ From           :
 To             : 
 From Clock     : 
 To Clock       : 
-Failed Paths   : 0
+Failed Paths   : 19
 
 --------------------------------------------------------------------------------------
 
